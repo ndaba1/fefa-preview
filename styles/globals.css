@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-display: optional;
+    src: url(/fonts/RobotoSlab-Regular.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Courgette";
+    font-style: normal;
+    font-display: swap;
+    src: url(/fonts/Courgette-Regular.woff2) format("woff2");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-roboto font-semibold;
+  }
+
+  h1 {
+    /* @apply text-5xl; */
+  }
+}
+
+@layer components {
+  .space-out-lg {
+    @apply space-y-6 lg:space-y-0 lg:space-x-6;
+  }
+
+  .link {
+    @apply text-lg cursor-pointer font-medium hover:text-blue-400 hover:scale-105;
+  }
+
+  .small-link {
+    @apply text-lg font-medium cursor-pointer hover:text-blue-500 hover:scale-105;
+  }
+
+  .center {
+    @apply flex justify-center items-center;
+  }
+
+  .medium-display {
+    @apply hidden md:flex;
+  }
+
+  .large-display {
+    @apply hidden lg:flex;
+  }
+
+  .small-display {
+    @apply block lg:hidden;
+  }
+
+  .btn {
+    @apply tracking-wide;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.roboto {
+  font-family: "Roboto Slab", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cursive {
+  font-family: "Courgette", cursive;
+}
